@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 
 export default class AddPlayerForm extends React.Component {
   static propTypes: {
-    onAdd: React.PropTypes.func.isRequired,
+    addPlayer: React.PropTypes.func.isRequired,
   };
 
   state = {
@@ -16,7 +16,7 @@ export default class AddPlayerForm extends React.Component {
 
   onSubmit = (e) => {
     if (e) e.preventDefault();
-    this.props.onAdd(this.state.name);
+    this.props.addPlayer(this.state.name);
     this.setState({ name: '' });
   }
   render() {

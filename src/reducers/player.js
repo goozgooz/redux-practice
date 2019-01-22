@@ -1,4 +1,4 @@
-import * as PlayerActions from '../actions/player';
+import * as PlayerActions from '../action-types/player';
 
 const initialState = [
   {
