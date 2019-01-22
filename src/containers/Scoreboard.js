@@ -4,6 +4,14 @@ import Header from '../components/Header';
 import Player from '../components/Player';
 
 export default class Scoreboard extends React.Component {
+  state = {
+    players: [
+      {
+        name: 'ashkaan',
+        score: 0,
+      }
+    ],
+}
 
   onScoreChange = (index, delta) => {
     this.state.players[index].score += delta;
