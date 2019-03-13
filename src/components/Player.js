@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Counter from './Counter';
 
 const Player = (props) => {
@@ -21,11 +22,10 @@ const Player = (props) => {
 }
 
 Player.propTypes = {
-  index: React.PropTypes.number.isRequired,
-  name: React.PropTypes.string.isRequired,
-  score: React.PropTypes.number.isRequired,
-  removePlayer: React.PropTypes.func.isRequired,
-  updatePlayerScore: React.PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+  score: PropTypes.number.isRequired,
+  onRemove: PropTypes.func.isRequired,
+  onScoreChange: PropTypes.func.isRequired,
 };
 
 export default Player;
